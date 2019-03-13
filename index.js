@@ -6,5 +6,6 @@ function nowServing(katzDeliLine) {
   return katzDeliLine.length ? `Currently serving ${katzDeliLine.shift()}.` : "There is nobody waiting to be served!";
 }
 function currentLine(line) {
-    return line.length ? line.reduce((a,c,i)=>a + ` ${i+1}. ${c},`,"The line is currently:") : "The line is currently empty.";
+    return line.length ? "The line is currently: " + line.map((c,i) => ' ${i+1} ${c}').join(",") : "The line is currently empty.";
 }
+
