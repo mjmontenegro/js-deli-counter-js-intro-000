@@ -8,4 +8,3 @@ function nowServing(katzDeliLine) {
 function currentLine(line) {
     return line.length ? "The line is currently: " + line.map((c,i) => ' ${i+1} ${c}').join(",") : "The line is currently empty.";
 }
-
